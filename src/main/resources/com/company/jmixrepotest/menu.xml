@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://jmix.io/schema/ui/menu">
+
+    <menu id="application" caption="msg://com.company.jmixrepotest/menu.application" insertBefore="administration">
+        <item screen="jrt_User.browse" caption="msg://com.company.jmixrepotest.screen.user/UserBrowse.caption"/>
+        <item screen="themeSettingsScreen" caption="msg://io.jmix.ui.app.themesettings/themeSettings.caption"/>
+        <item screen="jrt_Zoo.browse" caption="msg://com.company.jmixrepotest.screen.zoo/zooBrowse.menu"/>
+        <item screen="jrt_Animal.browse" caption="msg://com.company.jmixrepotest.screen.animal/animalBrowse.menu"/>
+    </menu>
+
+</menu-config>
