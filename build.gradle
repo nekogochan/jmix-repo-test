@@ -1,6 +1,7 @@
 plugins {
     id 'io.jmix' version '1.3.0'
     id 'java'
+    id 'maven-publish'
 }
 
 apply plugin: 'org.springframework.boot'
@@ -10,14 +11,26 @@ jmix {
     projectId = 'jrt'
 }
 
-group = 'com.company'
+group = 'jmix.repo.test'
 version = '0.0.1-SNAPSHOT'
+
+publishing {
+    repositories {
+        mavenLocal()
+    }
+    publications {
+        javaMaven(MavenPublication) {
+            artifactId = 'jmix.repo.test'
+        }
+    }
+}
 
 repositories {
     mavenCentral()
     maven {
         url 'https://global.repo.jmix.io/repository/public'
     }
+    mavenLocal()
 }
 
 dependencies {
@@ -41,6 +54,7 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    implementation 'com.company:jmix-repo-test-module-starter:0.0.1-SNAPSHOT'
 }
 
 test {
