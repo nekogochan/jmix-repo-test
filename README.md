@@ -1,4 +1,4 @@
-# jmix-repo-test (test module (add-on, in other words))
+# jmix-repo-test (module-check (add-on, in other words))
 
 add-on: https://github.com/nekogochanPomoika/jmix-repo-test-module (repo and service described in readme)
 
